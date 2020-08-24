@@ -10,7 +10,15 @@ var Hangman = (function () {
         
         // Dom is ready
         this.elId       = elId;
-        this.words      = ['PROGRAMMER', 'BRAINSTORM', 'CREATIVE', 'LOLLIPOP', 'CULTURE', 'RAZORSHARP', 'SCREWDRIVER', 'TYPEWRITER'];
+        this.words      = [];
+        this.hints      = [];
+
+        fetch('/wordlist.json')
+        .then( res => res.json() )
+        .then( json => json.forEach( entry => {
+            this.words.push(entry.word);
+            this.hints.push(entry.hint);
+        }))
     }
 
     Hangman.prototype.reset = function () {
@@ -19,7 +27,9 @@ var Hangman = (function () {
         this.STOPPED        = false;
         this.MISTAKES       = 0;
         this.GUESSES        = [];
-        this.WORD           = this.words[Math.floor(Math.random() * this.words.length)];
+        this.INDEX          = Math.floor(Math.random() * this.words.length);
+        this.WORD           = this.words[this.INDEX];
+        this.HINT           = this.hints[this.INDEX];
         
         // Reset Elements
         this.hideElementByClass('h');
