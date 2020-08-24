@@ -1,7 +1,40 @@
 /**
 * Hangman Javascript class
 * Author: @jelofsson
+* Author: @JadeMaverc
 **/
+
+var wordlist = [
+    {
+        "word": "LAUDATE",
+        "hint": "Name of an encylical released by Pope Francis"
+    },
+    {
+        "word": "JORGE",
+        "hint": "The current pontif's Christian name"
+    },
+    {
+        "word": "ENVIRONMENT",
+        "hint": "All that surrounds us"
+    },
+    {
+        "word": "DOG",
+        "hint": "Man's best friend"
+    },
+    {
+        "word": "BASILICA",
+        "hint": "the name given to certain churches granted special privileges by the Pope"
+    },
+    {
+        "word": "NAZARETH",
+        "hint": "Jesus' hometown"
+    },
+    {
+        "word": "ETYMOLOGY",
+        "hint": "the study of the origin of words and the way in which their meanings have changed throughout history."
+    }
+];
+
 var Hangman = (function () {
 
     'use strict';
@@ -13,12 +46,10 @@ var Hangman = (function () {
         this.words      = [];
         this.hints      = [];
 
-        fetch('/wordlist.json')
-            .then( res => res.json() )
-            .then( json => json.forEach( entry => {
-                this.words.push(entry.word);
-                this.hints.push(entry.hint);
-            }))
+        wordlist.forEach( entry => {
+            this.words.push(entry.word);
+            this.hints.push(entry.hint);
+        })
         
         // Hide the flower
         this.hideElementById(this.elId + "_1", null)
