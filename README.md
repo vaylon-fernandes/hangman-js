@@ -9,3 +9,5 @@ Try out demo [here](https://jademaveric.github.io/hangman-js/)
 ## Usage
 
 Open `index.html`
+
+Add addtional words and hints by modifying the `wordlist` array in `hangman.js`, line 7
