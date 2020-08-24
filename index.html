@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="hangman.css" />
         <link href='http://fonts.googleapis.com/css?family=Arvo' rel="stylesheet" type="text/css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="hangman.js"></script>
     </head>
     <body>
         <div id="hangm" class="container">
@@ -15,14 +14,14 @@
 
                 <div id="hangm_animation" class="flower-wrapper">
                     <div class="petal-wrapper">
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
+                        <div id="hangm_1" class="petal"></div>
+                        <div id="hangm_2" class="petal"></div>
+                        <div id="hangm_3" class="petal"></div>
+                        <div id="hangm_4" class="petal"></div>
+                        <div id="hangm_5" class="petal"></div>
                     </div>
 
-                    <div class="core"></div>
+                    <div id="hangm_6" class="core"></div>
                 </div>
 
                 <div style="height: 2em;">
@@ -56,5 +55,6 @@
                 <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
         </p>
+        <script type="text/javascript" src="hangman.js"></script>
     </body>
 </html>
