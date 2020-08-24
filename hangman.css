@@ -38,6 +38,11 @@ section#hangman {
     letter-spacing: 1em;
 }
 
+#hangm_hintbox {
+    font-size: 0.5em;
+    margin-top: 1em;
+}
+
 .man_head {
 	border-radius: 50%;
 	width: 40px;

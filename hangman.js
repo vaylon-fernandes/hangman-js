@@ -30,12 +30,19 @@ var Hangman = (function () {
         this.INDEX          = Math.floor(Math.random() * this.words.length);
         this.WORD           = this.words[this.INDEX];
         this.HINT           = this.hints[this.INDEX];
-        
+
         // Reset Elements
         this.hideElementByClass('h');
         this.showElementByIdWithContent(this.elId + "_guessbox", null);
         this.showElementByIdWithContent(this.elId + "_word", this.getGuessedfWord());
+        document.getElementById(this.elId + "_hintbox").innerHTML = "<button onclick='Hangman.showHint(); return false'>HINT</button>"
     };
+
+    Hangman.prototype.showHint = function () {
+
+        // Replace button with hint text
+        document.getElementById(this.elId + "_hintbox").innerHTML = this.HINT;
+    }
 
     Hangman.prototype.guess = function (guess) {
 

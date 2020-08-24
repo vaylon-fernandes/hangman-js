@@ -33,11 +33,16 @@
                             Guess the word:<div id="hangm_word"></div>
                         </div>
                         <input id="guess" onkeyup="Hangman.guess(this.value); this.value=''; return false;" type="text" placeholder="">
+                        
+                        <div id="hangm_hintbox">
+                            <button onclick="Hangman.showHint(); return false">HINT</button>
+                        </div>
                     </div>
                     <div class="col-sm-3">
                         <button type="button" id="btn-start" class="btn-lg btn-info" onclick="Hangman.reset(); return false;" >New Game</button>
                     </div>
                 </form>
+
 
         </div>
 
