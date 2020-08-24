@@ -31,6 +31,7 @@ section#hangman {
     height: 10em;
     margin: 0 auto;
     width: 11em;
+    transform: translate(-2em, -2em);
 }
 
 #hangm_word, 
