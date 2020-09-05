@@ -83,6 +83,9 @@ var Hangman = (function () {
         this.showElementByIdWithContent(this.elId + "_4", null)
         this.showElementByIdWithContent(this.elId + "_5", null)
         this.showElementByIdWithContent(this.elId + "_6", null)
+
+        // Show spaces
+        this.guess(' ');
     };
 
     Hangman.prototype.showHint = function () {
@@ -108,7 +111,7 @@ var Hangman = (function () {
         // Update the guessed letter list
         this.showElementByIdWithContent(this.elId + "_guesses", this.GUESSES.join(''));
 
-        if (this.WORD.indexOf(guess) < 0) {
+        if (this.WORD.indexOf(guess) < 0 && this.WORD != ' ') {
 
             // Incorrect guess
             this.MISTAKES++;
