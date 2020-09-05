@@ -6,32 +6,84 @@
 
 var wordlist = [
     {
-        "word": "LAUDATE",
-        "hint": "Name of an encylical released by Pope Francis"
+        "word": "SPHIX MACAW",
+        "hint": "Also know as the little blue macaw and went extinct due to habit extinction"
     },
     {
-        "word": "JORGE",
-        "hint": "The current pontif's Christian name"
+        "word": "HIBISCUS",
+        "hint": "A flower whose most common feature is an epicalyx and the stamens are typically fused into tube"
     },
     {
-        "word": "ENVIRONMENT",
-        "hint": "All that surrounds us"
+        "word": "MINT",
+        "hint": "Manufacturers of toothpaste, gum, candy, and beauty products often use this plant's oil"
     },
     {
         "word": "DOG",
         "hint": "Man's best friend"
     },
     {
-        "word": "BASILICA",
-        "hint": "the name given to certain churches granted special privileges by the Pope"
+        "word": "OSTRICH",
+        "hint": "a flightless bird with the largest eggs"
     },
     {
-        "word": "NAZARETH",
-        "hint": "Jesus' hometown"
+        "word": "FLAMINGO",
+        "hint": "a tall pink wading bird with a thick downturned bill"
     },
     {
         "word": "ETYMOLOGY",
         "hint": "the study of the origin of words and the way in which their meanings have changed throughout history."
+    },
+    {
+        "word": "KIWI",
+        "hint": "A flightless bird native to New zealand and is also the name of a fruit"
+    },
+    {
+        "word": "BLUE WHALE",
+        "hint": "Largest mammal on earth"
+    },
+    {
+        "word": "BUMBLEBEE BAT",
+        "hint": "Smallest mammal on earth"
+    },
+    {
+        "word": "MANGO",
+        "hint": "National fruit of India, Haiti, and the Philippines, belonging to the cashew family"
+    },
+    {
+        "word": "ENVIRONMENT",
+        "hint": "Habitat or natural surroundings"
+    },
+    {
+        "word": "TIGER",
+        "hint": "Large striped animal of the cat family"
+    },
+    {
+        "word": "GRETA THUNBERG",
+        "hint": "Swedish environmental activist"
+    },
+    {
+        "word": "ANTARCTICA",
+        "hint": "the southernmost continent and site of the South Pole"
+    },
+    {
+        "word": "PANGOLIN",
+        "hint": "Scaly aardvark"
+    },
+    {
+        "word": "MANGA",
+        "hint": "Japanese Comic books"
+    },
+    {
+        "word": "COYOTE",
+        "hint": "Trickster who want to catch the Roadrunner"
+    },
+    {
+        "word": "MAUNA KEA",
+        "hint": "tallest mountain on Earth"
+    },
+    {
+        "word": "AMAZON",
+        "hint": "Largest tropical forest in the world"
     }
 ];
 
@@ -111,7 +163,7 @@ var Hangman = (function () {
         // Update the guessed letter list
         this.showElementByIdWithContent(this.elId + "_guesses", this.GUESSES.join(''));
 
-        if (this.WORD.indexOf(guess) < 0 && this.WORD != ' ') {
+        if (this.WORD.indexOf(guess) < 0 && guess != ' ') {
 
             // Incorrect guess
             this.MISTAKES++;
